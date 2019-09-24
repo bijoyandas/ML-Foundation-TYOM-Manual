@@ -2,6 +2,6 @@ job:
   name: "model-training"
   execution:
     image: "ml-foundation/sklearn:0.19.1-py3"
-    command: "pip3 install -r requirements.txt && python3 simple_file.py"
+    command: "pip3 install -r requirements.txt && python3 model_training.py"
     completionTime: "10000" 
     resourcePlanId: "basic"
