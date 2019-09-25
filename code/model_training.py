@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import cross_val_score
+from sklearn.externals import joblib
 
 logger=logging.getLogger(__name__)
 
@@ -28,3 +29,7 @@ def train_model():
 
 logger.error("Model Training Execution Started")
 classifier = train_model()
+
+model_path = "model.pkl"
+
+joblib.dump(classifier, model_path, compress = 1)
